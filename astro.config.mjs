@@ -23,7 +23,7 @@ export default defineConfig({
   {
     icon: "github",
     label: "GitHub",
-    href: "https://github.com/CloudLabJP",
+    href: "https://github.com/cloudlab-jp",
   },
 ],
 
