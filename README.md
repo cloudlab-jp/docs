@@ -1,49 +1,64 @@
-# Starlight Starter Kit: Basics
+# CloudLab JP — Docs
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+[![Deploy](https://github.com/cloudlab-jp/docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/cloudlab-jp/docs/actions/workflows/deploy.yml)
 
+📖 **Sitio en vivo:** [cloudlab-jp.github.io/docs](https://cloudlab-jp.github.io/docs/)
+
+Documentación técnica de **CloudLab JP**, una iniciativa open-source enfocada en
+Cloud Engineering, Platform Engineering, DevOps e Infraestructura como Código.
+El objetivo es construir recursos de aprendizaje production-ready, plantillas
+reutilizables, automatización y buenas prácticas de ingeniería.
+
+## Contenido
+
+- **AWS** — guías de arquitectura, redes, IAM, Lambda, S3, EC2, VPC
+- **Terraform** — módulos de Infraestructura como Código, patrones reutilizables
+- **Docker** — contenedores, imágenes, Dockerfiles, Compose
+- **Kubernetes** — fundamentos, workloads, networking, Helm, clústeres en producción
+- **GitHub** — estándares de repositorio, workflows, Actions
+- **Platform Engineering** — plataformas internas de desarrollo, GitOps, CI/CD
+
+## Stack
+
+Construido con [Astro](https://astro.build) + [Starlight](https://starlight.astro.build),
+desplegado automáticamente en GitHub Pages vía GitHub Actions en cada push a `main`.
+
+## Desarrollo local
+
+Requisitos: Node.js.
+
+```bash
+git clone https://github.com/cloudlab-jp/docs.git
+cd docs
+npm install
+npm run dev
 ```
-npm create astro@latest -- --template starlight
-```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El sitio queda disponible en `localhost:4321`.
 
-## 🚀 Project Structure
+| Comando | Acción |
+| :--- | :--- |
+| `npm install` | Instala dependencias |
+| `npm run dev` | Levanta el servidor de desarrollo |
+| `npm run build` | Genera el sitio de producción en `./dist/` |
+| `npm run preview` | Previsualiza el build antes de desplegar |
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## Estructura
 
 ```
 .
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+├── src/content/docs/   # Contenido en Markdown/MDX
+├── src/assets/          # Imágenes y branding
+├── public/               # Assets estáticos (favicons, etc.)
+└── astro.config.mjs      # Configuración de Astro/Starlight
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Cada archivo `.md`/`.mdx` dentro de `src/content/docs/` se expone como una ruta
+según su nombre de archivo.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Contribuir
 
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Este es un proyecto abierto dentro de CloudLab JP. Si quieres proponer una
+guía, corregir contenido o agregar un nuevo tema, abre un issue o un pull
+request.
